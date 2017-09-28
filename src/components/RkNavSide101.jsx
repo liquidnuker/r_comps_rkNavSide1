@@ -1,8 +1,42 @@
+function RknavSide101_list(props) {
+  return (
+    <ul>
+      {props.pr_links.map((i, index) =>
+        <li key={i.linkName + index}>
+          <a href={i.link} tabindex="0" 
+          aria-setsize="5" aria-posinset={index + 1}>{i.linkName}</a>
+        </li>
+      )}
+    </ul>
+  );
+}
+
 export default class RkNavSide101 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // property1: ""
+      links: [
+        {
+          link: "http://",
+          linkName: "Link One"
+        },
+        {
+          link: "http://",
+          linkName: "Link Two"
+        },
+        {
+          link: "http://",
+          linkName: "Link Three"
+        },
+        {
+          link: "http://",
+          linkName: "Link Four"
+        },
+        {
+          link: "http://",
+          linkName: "Link Five"
+        }
+      ]
     };
 
     // 
@@ -22,13 +56,7 @@ export default class RkNavSide101 extends React.Component {
     return (
       <nav className="rknavSide101" role="navigation">
         <h3 className="rknavSide101_heading">Nav Title</h3>
-        <ul>
-          <li><a href="" tabindex="0" aria-setsize="5" aria-posinset="1">Link one</a></li>
-          <li><a href="" tabindex="0" aria-setsize="5" aria-posinset="2">Link one</a></li>
-          <li><a href="" tabindex="0" aria-setsize="5" aria-posinset="3">Link one</a></li>
-          <li><a href="" tabindex="0" aria-setsize="5" aria-posinset="4">Link one</a></li>
-          <li><a href="" tabindex="0" aria-setsize="5" aria-posinset="5">Link one</a></li>
-        </ul>
+        <RknavSide101_list pr_links={this.state.links}/>
       </nav>
     );
   }

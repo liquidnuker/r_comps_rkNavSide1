@@ -102,15 +102,15 @@ var _RkNavSide = __webpack_require__(3);
 
 var _RkNavSide2 = _interopRequireDefault(_RkNavSide);
 
-var _RkNavSide3 = __webpack_require__(5);
+var _RkNavSide3 = __webpack_require__(4);
 
 var _RkNavSide4 = _interopRequireDefault(_RkNavSide3);
 
-var _RkNavSide5 = __webpack_require__(6);
+var _RkNavSide5 = __webpack_require__(5);
 
 var _RkNavSide6 = _interopRequireDefault(_RkNavSide5);
 
-var _RkNavSide7 = __webpack_require__(7);
+var _RkNavSide7 = __webpack_require__(6);
 
 var _RkNavSide8 = _interopRequireDefault(_RkNavSide7);
 
@@ -218,6 +218,25 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+function RknavSide101_list(props) {
+  return React.createElement(
+    "ul",
+    null,
+    props.pr_links.map(function (i, index) {
+      return React.createElement(
+        "li",
+        { key: i.linkName + index },
+        React.createElement(
+          "a",
+          { href: i.link, tabindex: "0",
+            "aria-setsize": "5", "aria-posinset": index + 1 },
+          i.linkName
+        )
+      );
+    })
+  );
+}
+
 var RkNavSide101 = function (_React$Component) {
   _inherits(RkNavSide101, _React$Component);
 
@@ -227,7 +246,22 @@ var RkNavSide101 = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (RkNavSide101.__proto__ || Object.getPrototypeOf(RkNavSide101)).call(this, props));
 
     _this.state = {
-      // property1: ""
+      links: [{
+        link: "http://",
+        linkName: "Link One"
+      }, {
+        link: "http://",
+        linkName: "Link Two"
+      }, {
+        link: "http://",
+        linkName: "Link Three"
+      }, {
+        link: "http://",
+        linkName: "Link Four"
+      }, {
+        link: "http://",
+        linkName: "Link Five"
+      }]
     };
 
     // 
@@ -260,55 +294,7 @@ var RkNavSide101 = function (_React$Component) {
           { className: "rknavSide101_heading" },
           "Nav Title"
         ),
-        React.createElement(
-          "ul",
-          null,
-          React.createElement(
-            "li",
-            null,
-            React.createElement(
-              "a",
-              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "1" },
-              "Link one"
-            )
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement(
-              "a",
-              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "2" },
-              "Link one"
-            )
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement(
-              "a",
-              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "3" },
-              "Link one"
-            )
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement(
-              "a",
-              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "4" },
-              "Link one"
-            )
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement(
-              "a",
-              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "5" },
-              "Link one"
-            )
-          )
-        )
+        React.createElement(RknavSide101_list, { pr_links: this.state.links })
       );
     }
   }]);
@@ -319,8 +305,7 @@ var RkNavSide101 = function (_React$Component) {
 exports.default = RkNavSide101;
 
 /***/ }),
-/* 4 */,
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -436,7 +421,7 @@ var RkNavSide102 = function (_React$Component) {
 exports.default = RkNavSide102;
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -567,7 +552,7 @@ var RkNavSide103 = function (_React$Component) {
 exports.default = RkNavSide103;
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
