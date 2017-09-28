@@ -1,5 +1,6 @@
 import RkNavSide101 from "./RkNavSide101.jsx";
 import RkNavSide102 from "./RkNavSide102.jsx";
+import RkNavSide103 from "./RkNavSide103.jsx";
 
 export default function Home(props) {
   return (
@@ -19,6 +20,15 @@ export default function Home(props) {
     <div className="row">
       <div className="col-sm-3">
         <RkNavSide102 />
+      </div>
+      <div className="col-sm-9">39</div>
+    </div>
+
+  {/*rkNavSide103*/}
+    <h2 className="item-id">rkNavSide103</h2>
+    <div className="row">
+      <div className="col-sm-3">
+        <RkNavSide103 />
       </div>
       <div className="col-sm-9">39</div>
     </div>
