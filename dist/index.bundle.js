@@ -97,17 +97,157 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = Home;
+
+var _RkNavSide = __webpack_require__(3);
+
+var _RkNavSide2 = _interopRequireDefault(_RkNavSide);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
 function Home(props) {
   return React.createElement(
     "div",
-    { "class": "row" },
+    null,
+    React.createElement(
+      "h2",
+      { className: "item-id" },
+      "rkNavSide101"
+    ),
     React.createElement(
       "div",
-      { "class": "col-sm-12" },
-      "Home"
+      { className: "row" },
+      React.createElement(
+        "div",
+        { className: "col-sm-3" },
+        React.createElement(_RkNavSide2.default, null)
+      ),
+      React.createElement(
+        "div",
+        { className: "col-sm-9" },
+        "39"
+      )
     )
   );
 }
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RkNavSide101 = function (_React$Component) {
+  _inherits(RkNavSide101, _React$Component);
+
+  function RkNavSide101(props) {
+    _classCallCheck(this, RkNavSide101);
+
+    var _this = _possibleConstructorReturn(this, (RkNavSide101.__proto__ || Object.getPrototypeOf(RkNavSide101)).call(this, props));
+
+    _this.state = {
+      // property1: ""
+    };
+
+    // 
+    _this.method1 = _this.method1.bind(_this);
+    return _this;
+  }
+
+  // lifecycle hooks
+
+  // methods
+
+
+  _createClass(RkNavSide101, [{
+    key: "method1",
+    value: function method1() {
+      this.setState(function (prevState) {
+        return {
+          // property1: store.state
+        };
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      return React.createElement(
+        "nav",
+        { className: "rknavSide101", role: "navigation" },
+        React.createElement(
+          "h3",
+          { className: "rknavSide101_heading" },
+          "Nav Title"
+        ),
+        React.createElement(
+          "ul",
+          null,
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "1" },
+              "Link one"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "2" },
+              "Link one"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "3" },
+              "Link one"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "4" },
+              "Link one"
+            )
+          ),
+          React.createElement(
+            "li",
+            null,
+            React.createElement(
+              "a",
+              { href: "", tabindex: "0", "aria-setsize": "5", "aria-posinset": "5" },
+              "Link one"
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return RkNavSide101;
+}(React.Component);
+
+exports.default = RkNavSide101;
 
 /***/ })
 /******/ ]);
