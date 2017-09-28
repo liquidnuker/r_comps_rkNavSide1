@@ -4,7 +4,7 @@ function RknavSide101_list(props) {
       {props.pr_links.map((i, index) =>
         <li key={i.linkName + index}>
           <a href={i.link} tabindex="0" 
-          aria-setsize="5" aria-posinset={index + 1}>{i.linkName}</a>
+          aria-setsize={props.pr_links.length} aria-posinset={index + 1}>{i.linkName}</a>
         </li>
       )}
     </ul>

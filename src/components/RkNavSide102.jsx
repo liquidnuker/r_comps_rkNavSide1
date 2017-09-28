@@ -7,7 +7,7 @@ function RkNavSide102_links(props) {
       <img src={i.imgSrc} alt={i.imgAlt} title={i.imgTitle} />
       </div>
       <a href={i.link} tabindex="0" 
-      aria-setsize="3" aria-posinset={index + 1}>{i.linkName}</a>
+      aria-setsize={props.pr_links.length} aria-posinset={index + 1}>{i.linkName}</a>
       </li>
       )}
     </ul>

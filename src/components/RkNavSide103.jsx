@@ -1,8 +1,51 @@
+function RkNavSide103_links(props) {
+  return (
+    <ul>
+    {props.pr_links.map((i, index) =>
+      <li key={i.linkName + index}>
+      <div className="rknavSide103_img-holder">
+      <img src={i.imgSrc} alt={i.imgAlt} title={i.imgTitle} />
+      </div>
+      <a href={i.link} tabindex="0" aria-setsize={props.pr_links.length} aria-posinset={index + 1}>
+      {i.linkName}
+      </a>
+      <p>{i.linkDesc}</p>
+      </li>
+      )}
+    </ul>
+  );
+}
+
 export default class RkNavSide103 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // property1: ""
+      links: [
+        {
+          imgSrc: "img1.jpg",
+          imgAlt: "img alt 1",
+          imgTitle: "img title 1",
+          link: "http://",
+          linkName: "Link One",
+          linkDesc: "Link one description"
+        },
+        {
+          imgSrc: "img2.jpg",
+          imgAlt: "img alt 2",
+          imgTitle: "img title 2",
+          link: "http://",
+          linkName: "Link Two",
+          linkDesc: "Link two description"
+        },
+        {
+          imgSrc: "img2.jpg",
+          imgAlt: "img alt 2",
+          imgTitle: "img title 2",
+          link: "http://",
+          linkName: "Link Three",
+          linkDesc: "Link three description"
+        }
+      ]
     };
 
     // 
@@ -22,35 +65,7 @@ export default class RkNavSide103 extends React.Component {
     return (
       <nav className="rknavSide103" role="navigation">
         <h3 className="rknavSide103_heading">Nav Title</h3>
-        <ul>
-          <li>
-            <div className="rknavSide103_img-holder">
-              <img src="img.jpg" alt="img alt" title="img title" />
-            </div>
-            <a href="" tabindex="0" aria-setsize="3" aria-posinset="1">
-              Link one
-            </a>
-            <p>Link one description</p>
-          </li>
-          <li>
-            <div className="rknavSide103_img-holder">
-              <img src="img.jpg" alt="img alt" title="img title" />
-            </div>
-            <a href="" tabindex="0" aria-setsize="3" aria-posinset="2">
-              Link one
-            </a>
-            <p>Link one description</p>
-          </li>
-          <li>
-            <div className="rknavSide103_img-holder">
-              <img src="img.jpg" alt="img alt" title="img title" />
-            </div>
-            <a href="" tabindex="0" aria-setsize="3" aria-posinset="3">
-              Link one
-            </a>
-            <p>Link one description</p>
-          </li>
-        </ul>
+        <RkNavSide103_links pr_links={this.state.links} />
       </nav>
     );
   }
