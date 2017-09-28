@@ -1,8 +1,40 @@
+function RkNavSide104_links(props) {
+  return (
+    <ul>
+    {props.pr_links.map((i, index) =>
+      <li key={i.linkName + index}>
+      <div className="rknavSide104_img-holder">
+      <span>{i.icon}</span>
+      </div>
+      <a href={i.link} tabindex="0" 
+      aria-setsize={props.pr_links.length} aria-posinset={index + 1}>{i.linkName}</a>
+      </li>
+      )}
+    </ul>
+  );
+}
+
 export default class RkNavSide104 extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // property1: ""
+      links: [
+        {
+          icon: "1",
+          link: "http://",
+          linkName: "Link One"
+        },
+        {
+          icon: "2",
+          link: "http://",
+          linkName: "Link Two"
+        },
+        {
+          icon: "3",
+          link: "http://",
+          linkName: "Link Three"
+        }
+      ]
     };
 
     // 
@@ -22,32 +54,7 @@ export default class RkNavSide104 extends React.Component {
     return (
       <nav className="rknavSide104" role="navigation">
         <h3 className="rknavSide104_heading">Nav Title</h3>
-        <ul>
-          <li>
-            <div className="rknavSide104_img-holder">
-              <span>s</span>
-            </div>
-            <a href="" tabindex="0" aria-setsize="4" aria-posinset="1">link one</a>
-          </li>
-          <li>
-            <div className="rknavSide104_img-holder">
-              <span>s</span>
-            </div>
-            <a href="" tabindex="0" aria-setsize="4" aria-posinset="2">link one</a>
-          </li>
-          <li>
-            <div className="rknavSide104_img-holder">
-              <span>s</span>
-            </div>
-            <a href="" tabindex="0" aria-setsize="4" aria-posinset="3">link one</a>
-          </li>
-          <li>
-            <div className="rknavSide104_img-holder">
-              <span>s</span>
-            </div>
-            <a href="" tabindex="0" aria-setsize="4" aria-posinset="4">link one</a>
-          </li>
-        </ul>
+        <RkNavSide104_links pr_links={this.state.links} />
       </nav>
     );
   }

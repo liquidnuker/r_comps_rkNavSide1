@@ -556,6 +556,34 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+function RkNavSide104_links(props) {
+  return React.createElement(
+    "ul",
+    null,
+    props.pr_links.map(function (i, index) {
+      return React.createElement(
+        "li",
+        { key: i.linkName + index },
+        React.createElement(
+          "div",
+          { className: "rknavSide104_img-holder" },
+          React.createElement(
+            "span",
+            null,
+            i.icon
+          )
+        ),
+        React.createElement(
+          "a",
+          { href: i.link, tabindex: "0",
+            "aria-setsize": props.pr_links.length, "aria-posinset": index + 1 },
+          i.linkName
+        )
+      );
+    })
+  );
+}
+
 var RkNavSide104 = function (_React$Component) {
   _inherits(RkNavSide104, _React$Component);
 
@@ -565,7 +593,19 @@ var RkNavSide104 = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (RkNavSide104.__proto__ || Object.getPrototypeOf(RkNavSide104)).call(this, props));
 
     _this.state = {
-      // property1: ""
+      links: [{
+        icon: "1",
+        link: "http://",
+        linkName: "Link One"
+      }, {
+        icon: "2",
+        link: "http://",
+        linkName: "Link Two"
+      }, {
+        icon: "3",
+        link: "http://",
+        linkName: "Link Three"
+      }]
     };
 
     // 
@@ -598,82 +638,7 @@ var RkNavSide104 = function (_React$Component) {
           { className: "rknavSide104_heading" },
           "Nav Title"
         ),
-        React.createElement(
-          "ul",
-          null,
-          React.createElement(
-            "li",
-            null,
-            React.createElement(
-              "div",
-              { className: "rknavSide104_img-holder" },
-              React.createElement(
-                "span",
-                null,
-                "s"
-              )
-            ),
-            React.createElement(
-              "a",
-              { href: "", tabindex: "0", "aria-setsize": "4", "aria-posinset": "1" },
-              "link one"
-            )
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement(
-              "div",
-              { className: "rknavSide104_img-holder" },
-              React.createElement(
-                "span",
-                null,
-                "s"
-              )
-            ),
-            React.createElement(
-              "a",
-              { href: "", tabindex: "0", "aria-setsize": "4", "aria-posinset": "2" },
-              "link one"
-            )
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement(
-              "div",
-              { className: "rknavSide104_img-holder" },
-              React.createElement(
-                "span",
-                null,
-                "s"
-              )
-            ),
-            React.createElement(
-              "a",
-              { href: "", tabindex: "0", "aria-setsize": "4", "aria-posinset": "3" },
-              "link one"
-            )
-          ),
-          React.createElement(
-            "li",
-            null,
-            React.createElement(
-              "div",
-              { className: "rknavSide104_img-holder" },
-              React.createElement(
-                "span",
-                null,
-                "s"
-              )
-            ),
-            React.createElement(
-              "a",
-              { href: "", tabindex: "0", "aria-setsize": "4", "aria-posinset": "4" },
-              "link one"
-            )
-          )
-        )
+        React.createElement(RkNavSide104_links, { pr_links: this.state.links })
       );
     }
   }]);
