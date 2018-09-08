@@ -13,7 +13,7 @@ export default function Home(props) {
       <div className="col-sm-3">
         <RkNavSide101 />
       </div>
-      <div className="col-sm-9">39</div>
+      <div className="col-sm-9">&nbsp;</div>
     </div>
 
   {/*rkNavSide102*/}
@@ -22,7 +22,7 @@ export default function Home(props) {
       <div className="col-sm-3">
         <RkNavSide102 />
       </div>
-      <div className="col-sm-9">39</div>
+      <div className="col-sm-9">&nbsp;</div>
     </div>
 
   {/*rkNavSide103*/}
@@ -31,7 +31,7 @@ export default function Home(props) {
       <div className="col-sm-3">
         <RkNavSide103 />
       </div>
-      <div className="col-sm-9">39</div>
+      <div className="col-sm-9">&nbsp;</div>
     </div>
 
   {/*rkNavSide104*/}
@@ -40,7 +40,7 @@ export default function Home(props) {
       <div className="col-sm-3">
         <RkNavSide104 />
       </div>
-      <div className="col-sm-9">39</div>
+      <div className="col-sm-9">&nbsp;</div>
     </div>
     
     </div>
